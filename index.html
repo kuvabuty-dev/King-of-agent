@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King of Agent - Shooter Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">Score: 0</div>
+            <div id="health">Health: 100</div>
+            <div id="wave">Wave: 1</div>
+            <div id="ammo">Ammo: 30</div>
+        </div>
+        <div id="gameOverScreen" class="hidden">
+            <div class="gameOverContent">
+                <h1>Game Over</h1>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Wave Reached: <span id="waveReached">1</span></p>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+        </div>
+        <div id="startScreen">
+            <div class="startContent">
+                <h1>King of Agent</h1>
+                <p>Survive the waves of enemies and become the ultimate agent!</p>
+                <div class="controls">
+                    <p><strong>Controls:</strong></p>
+                    <p>Arrow Keys or WASD - Move</p>
+                    <p>Mouse - Aim</p>
+                    <p>Left Click - Shoot</p>
+                    <p>SPACE - Reload</p>
+                    <p>E - Special Ability (every 10 kills)</p>
+                </div>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
